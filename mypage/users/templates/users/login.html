@@ -1,0 +1,13 @@
+<h2>Welcome Stranger</h2>
+<form method="POST" action="">
+    {% csrf_token %}
+    <label for="name">
+        <span>Nombre de Usuario</span>
+        {{form.username}}
+    </label>
+    <label for="password">
+        <span>Contraseña</span>
+        {{form.password}}
+    </label>
+    <input type="submit" value="Login!">
+</form>
