@@ -7,9 +7,10 @@ from .models import Profile
 
 
 class SignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=100,required=True)
-    last_name = forms.CharField(max_length=100, required=False)
-    email = forms.EmailField(required=True)
+    
+    first_name = forms.CharField(label="Nombre",max_length=100,required=True)
+    last_name = forms.CharField(label="Apellido",max_length=100, required=False)
+    email = forms.EmailField(label="Correo Electronico",required=True)
 
     class Meta:
         model = User
@@ -25,6 +26,7 @@ class SignUpForm(UserCreationForm):
             "password1",
             "password2",
         )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['password1'].help_text = None
