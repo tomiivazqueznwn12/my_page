@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate,logout
 from django.http import HttpResponse
 from django.contrib.auth.views import LoginView
 from django.views.generic.list import ListView
 from django.views.generic import CreateView
 from django.contrib.auth.decorators import login_required
-from .forms import SignUpForm
+from .forms import SignUpForm, UserLoginForm
 
 from .models import Profile
 
@@ -17,6 +17,7 @@ def hello(request):
 
 class LoginView(LoginView):
     template_name = "users/login.html"
+    form_class= UserLoginForm
 
 class SignUpView(CreateView):
     model = Profile
@@ -33,3 +34,7 @@ class SignUpView(CreateView):
         user = authenticate(username=user, password=password)
         login(self.request, user)
         return redirect('/')
+
+def logout_view(request):
+    logout(request)
+    return redirect("/")

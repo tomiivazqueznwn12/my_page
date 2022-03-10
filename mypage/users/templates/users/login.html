@@ -1,14 +1,23 @@
-<h2>Welcome Stranger</h2>
-<form method="POST" action="">
-    {% csrf_token %}
-    <label for="name">
-        <span>Nombre de Usuario</span>
-        {{form.username}}
-    </label>
-    <label for="password">
-        <span>Contraseña</span>
-        {{form.password}}
-    </label>
-    <input type="submit" value="Iniciar Sesión">
-</form>
-<h4>¿No tienes cuenta? | <a href="{% url 'signup' %}">Registrate aquí</a></h4>
+{% extends 'users/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static './reset.css' %}">
+<link rel="stylesheet" href="{% static './style.css' %}">
+{% endblock %}
+{% block title %}Inicia sesión{% endblock %}
+{% block content %}
+    <form class="login-form" method="POST" action="">
+        <h2>Welcome Stranger</h2>
+        {% csrf_token %}
+        <label class="entry">
+            {{form.username}}
+        </label>
+        <label class="entry">
+            {{form.password}}
+        </label>
+        <input type="submit" class="button" value="Iniciar Sesión">
+    </form>
+    <h4>¿No tienes cuenta? | </h4>
+    <a href="{% url 'signup' %}">Registrate aquí</a>
+{% endblock%}
+
