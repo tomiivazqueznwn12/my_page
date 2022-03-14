@@ -5,7 +5,7 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(155deg, #ffbb24 0, #ffad31 8.33%, #ff9d3d 16.67%, #ff8b46 25%, #ff794d 33.33%, #ff6651 41.67%, #f25353 50%, #db4153 58.33%, #c63354 66.67%, #b42754 75%, #a31e55 83.33%, #941957 91.67%, #88185a 100%);
+    background: rgb(56,58,61);
 }
 a {
     text-decoration: none;
@@ -20,6 +20,7 @@ a {
     margin-top: 150px;
     padding: 20px 30px;
     border-radius: 6px;
+    box-shadow: 7px 11px 37px #000;
 }
 
 .login-form h2{
@@ -34,17 +35,19 @@ a {
 
 #id_password {
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.40);
     margin-bottom: 20px;
     padding: 11px 10px;    
-    background: rgb(138, 129, 129, 0.500)
+    background: rgba(138, 129, 129, 0.500);
+    border-radius: 4px;
 }
 #id_username {
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.40);
     margin-bottom: 20px;
     padding: 11px 10px;
-    background: rgba(138, 129, 129, 0.500)
+    background: rgba(138, 129, 129, 0.500);
+    border-radius:4px;
 }
 
 
@@ -52,11 +55,23 @@ a {
 .button {
     width: 100%;
     height: 45px;
-    background: rgb(13, 182, 27);
-    border-radius: 3px;
     color: white;
+    background: rgb(45,168,78);
+    border-radius: 3px;
     margin-bottom: 2px;
+    border: none;
     font-size: 18px;
     margin-top: 5px;
     font-family:Arial, Helvetica, sans-serif;
+}
+.button:hover{
+    background:rgb(45, 153, 74);
+}
+.login-form h4{
+    margin-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+h4 a:hover{
+    text-decoration:underline;
 }
