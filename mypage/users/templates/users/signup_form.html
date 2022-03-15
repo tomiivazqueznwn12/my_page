@@ -1,11 +1,16 @@
 {% extends 'users/base.html' %}
-
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'reset.css' %}">
+<link rel="stylesheet" href="{% static 'signup/style.css' %}">
+{% endblock %}
 {% block title %} Create una cuenta |{% endblock %} 
 
 {% block content %}
-    <form action="" method="POST">
+    <form class="signup-form"action="" method="POST">
+        <h2>Create una cuenta</h2>
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit",name="signup", value="Registrarte">
+        <input class="button"type="submit",name="signup", value="Registrarte">
     </form>
 {% endblock %}
