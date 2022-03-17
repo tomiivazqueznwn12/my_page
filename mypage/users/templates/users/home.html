@@ -1,6 +1,21 @@
 {% extends 'users/base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
 {% block title %}Home |{% endblock %}
-{% block content%} 
+
+{% block content%}
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Clases</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Donar</a></li>
+            <a href="{% url 'logout' %}">Salir</a>
+        </ul>
+    </nav>
     <h2>Hola {{user.first_name}}</h2>
-    <a href="{% url 'logout' %}">Salir</a>
+    
 {% endblock %}
