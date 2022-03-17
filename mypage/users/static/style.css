@@ -8,17 +8,30 @@ body{
     background: rgb(56,58,61);
 }
 
-.nav-bar{
-    width: auto;
-    height: 50px;
-    background-color: rgb(40, 42, 53);
-}
-.nav-bar li a{
+
+.nav-bar ul li a{
     text-decoration: none;
     color: white;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
 }
-li {
-    display: inline;
-    text-decoration: none;
+.nav-bar ul li {
     
+    float: left;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(40, 42, 53);
+}
+
+
+
+
+li a:hover {
+    background-color: #111;
 }
