@@ -26,4 +26,5 @@ urlpatterns = [
     path("login/", LoginView.as_view(), name="login"),
     path("signup/", user_views.SignUpView.as_view(),name="signup"),
     path("logout/",user_views.logout_view,name="logout"),
+    path("/clases",user_views.redirect_to,name="clases")
 ]

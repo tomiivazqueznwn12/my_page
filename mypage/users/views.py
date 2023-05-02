@@ -15,6 +15,10 @@ from .models import Profile
 def hello(request):
     return render(request,"users/home.html",context={"user":request.user})
 
+@login_required(login_url="login/")
+def redirect_to(request):
+    return render(request,"users/clases.html",context={"user":request.user})
+
 class LoginView(LoginView):
     template_name = "users/login.html"
     form_class= UserLoginForm
