@@ -6,6 +6,7 @@
 {% endblock %}
 {% block title %}Inicia sesión{% endblock %}
 {% block content %}
+
     <form class="login-form" method="POST" action="">
         <h2>Welcome Stranger</h2>
         {% csrf_token %}
@@ -16,7 +17,7 @@
             {{form.password}}
         </label>
         <input type="submit" class="button" value="Iniciar Sesión">
-        <h4>¿No tienes cuenta? | <a href="{% url 'signup' %}">Registrate aquí</a>.</h4>
+        </h4>¿No tienes cuenta? | <a href="{% url 'signup' %}">Registrate aquí</a>.</h4>
     </form>
 {% endblock%}
 

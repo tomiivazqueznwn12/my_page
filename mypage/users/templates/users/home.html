@@ -4,18 +4,22 @@
     <link rel="stylesheet" href="{% static 'reset.css' %}">
     <link rel="stylesheet" href="{% static 'style.css' %}">
 {% endblock %}
-{% block title %}Home |{% endblock %}
+{% block title %}Home | Hola {{user.first_name}}{% endblock %}
 
 {% block content%}
     <nav class="nav-bar">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Clases</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Donar</a></li>
-            <a href="{% url 'logout' %}">Salir</a>
+            <li class="a"><a class="aa"href="#"><img src="{%static 'dna.png'%}"class="image">Udgarda</a></li>
+            <li class="b"><a href="#">Clases</a></li>
+            <li class="b"><a href="#">Contacto</a></li>
+            <li class="b"><a href="#">Donar</a></li>
+            <li class="b"><a href="{% url 'logout' %}">Salir</a></li>
         </ul>
     </nav>
-    <h2>Hola {{user.first_name}}</h2>
+    <h2 class="a"></h2>
+    <div class="home-mesage">
+        <h2>Ahora con Udgarda<br>estudia mejor</h2>
+        <h3>aprende de la manera mas optima<br>con el menor estres posible</h3>
+    </div>
     
 {% endblock %}

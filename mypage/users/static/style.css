@@ -5,16 +5,16 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: rgb(56,58,61);
+    /*background: rgb(56,58,61);*/
 }
 
 
 .nav-bar ul li a{
     text-decoration: none;
     color: white;
-    display: block;
+    display: inline-block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 30px;
 }
 .nav-bar ul li {
     
@@ -29,9 +29,38 @@ body{
     background-color: rgb(40, 42, 53);
 }
 
+.a{
+    padding-right: 55%;
+}
 
 
 
-li a:hover {
-    background-color: #111;
+
+.b :hover {
+    background-color: rgb(27, 28, 36);
+}
+
+
+h2 {
+    font-size: larger;
+    margin: auto;
+    text-align: left;
+    padding-left: 25px;
+    padding-top:5px;
+}
+
+.nav-bar .a .aa{
+    font-family:fantasy;
+}
+
+.nav-bar .a .aa .image{
+    padding-right: 3px;
+}
+
+.home-mesage h2{
+    text-align:left;
+    margin-top: 14%;
+    margin-left: 6%;
+    font-family:monospace;
+    font-size: 2.5em;
 }
